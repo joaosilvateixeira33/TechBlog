@@ -1,24 +1,97 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
-  --brand-color: #846aff;
+    --brand-color: #846aff;
 
-  --dark: #121214;
+    --dark: #121214;
 
-  --gray-10: #7c7c8a;
-  --gray-20: #eaeaea;
-  --gray-30: #eeeeff;
-  --gray-40: #f8f8ff;
+    --gray-10: #7c7c8a;
+    --gray-20: #eaeaea;
+    --gray-30: #eeeeff;
+    --gray-40: #f8f8ff;
 
-  --white: #ffffff;
+    --white: #ffffff;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-size: 1em;
+    color: var(--dark);
+}
+
+main {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.hero {
+    background-color: var(--gray-40);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    gap: 24px;
+}
+
+.hero img {
+    width: 55%;
+    max-width: 220px;
+    height: auto;
+}
+
+.hero h2 {
+    max-width: 340px;
+
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.hero .emphasis {
+    color: var(--brand-color);
+}
+
+.hero p {
+    max-width: 340px;
+
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.hero .btn-search {
+    width: 100%;
+    max-width: 343px;
+
+    padding: 14px 16px;
+
+    border: none;
+    border-radius: 4px;
+
+    background-color: var(--brand-color);
+    color: var(--white);
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
 }
