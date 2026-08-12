@@ -219,3 +219,74 @@ section {
         padding: 64px 32px;
     }
 }
+
+/* desktops screens styles */
+@media screen and (min-width: 1024px) {
+
+    .hero {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        text-align: left;
+
+        padding: 64px 10%;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 24px;
+
+        width: 45%;
+        max-width: 500px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        max-width: 500px;
+    }
+
+    .hero p {
+        max-width: 450px;
+    }
+
+    .hero img {
+        width: 40%;
+        max-width: 400px;
+    }
+
+    .hero .btn-search {
+        width: auto;
+        min-width: 180px;
+    }
+
+
+    .article-recomended {
+        padding: 64px 10%;
+    }
+
+    .article-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+
+    .form-container {
+        align-items: center;
+        padding: 64px 24px;
+    }
+
+    .form-container h2 {
+        width: 100%;
+        max-width: 450px;
+        text-align: center;
+    }
+
+    .form-container input,
+    .form-container textarea {
+        max-width: 450px;
+    }
+}
