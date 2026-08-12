@@ -174,3 +174,48 @@ section {
     text-transform: uppercase;
     cursor: pointer;
 }
+
+/* Tablets screens styles */
+@media screen and (min-width: 768px) {
+
+    section {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .hero {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .hero img {
+        width: 40%;
+        max-width: 280px;
+    }
+
+    .hero h2 {
+        max-width: 520px;
+    }
+
+    .hero p {
+        max-width: 520px;
+    }
+
+    .hero .btn-search {
+        max-width: 520px;
+    }
+
+    .article-recomended {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .article-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    .form-container {
+        padding: 64px 32px;
+    }
+}
