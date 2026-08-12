@@ -31,23 +31,21 @@ main {
 
 section {
     width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
-}
-
-.hero {
-    background-color: var(--gray-40);
-
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 24px;
+    padding: 24px;
+}
 
+/* Seção hero */
+.hero {
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: var(--gray-40);
     text-align: center;
-
     padding-top: 64px;
     padding-bottom: 64px;
-
-    gap: 24px;
 }
 
 .hero img {
@@ -93,5 +91,86 @@ section {
 
     text-transform: uppercase;
 
+    cursor: pointer;
+}
+
+/* Articles section */
+.article-recomended {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.article-recomended > h1 {
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
+.article-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+/* cards style */
+.card {
+    border: 1px solid var(--gray-20);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.card h2 {
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 24px 24px 12px;
+}
+
+.card p {
+    margin: 0 24px 24px;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--gray-10);
+}
+
+/* form styles */
+.form-container {
+    background-color: var(--gray-40);
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-container h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 16px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    border: 1px solid var(--gray-20);
+    border-radius: 4px;
+    outline: none;
+}
+
+.form-container textarea {
+    height: 130px;
+    resize: none;
+}
+
+.form-container input[type="submit"] {
+    background-color: var(--brand-color);
+    color: var(--white);
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
     cursor: pointer;
 }
