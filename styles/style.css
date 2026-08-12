@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 
 :root {
     --brand-color: #846aff;
@@ -29,53 +29,57 @@ main {
     width: 100%;
 }
 
-section {
+/* ==========================
+   HERO
+========================== */
+
+.hero {
     width: 100%;
+    padding: 64px 16px;
+
+    background-color: var(--gray-40);
+
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 24px;
-    padding: 24px;
-}
 
-/* Seção hero */
-.hero {
-    padding-left: 16px;
-    padding-right: 16px;
-    background-color: var(--gray-40);
     text-align: center;
-    padding-top: 64px;
-    padding-bottom: 64px;
 }
 
-.hero img {
+.hero > img {
     width: 55%;
     max-width: 220px;
     height: auto;
 }
 
-.hero h2 {
-    max-width: 340px;
+.hero-content {
+    width: 100%;
+    max-width: 343px;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.hero-content h2 {
     font-size: 24px;
     line-height: 1.3;
     font-weight: 700;
 }
 
-.hero .emphasis {
+.hero-content .emphasis {
     color: var(--brand-color);
 }
 
-.hero p {
-    max-width: 340px;
-
+.hero-content p {
     font-size: 16px;
     line-height: 24px;
 }
 
-.hero .btn-search {
+.hero-content .btn-search {
     width: 100%;
-    max-width: 343px;
 
     padding: 14px 16px;
 
@@ -94,124 +98,167 @@ section {
     cursor: pointer;
 }
 
-/* Articles section */
+/* ==========================
+   ARTIGOS
+========================== */
+
 .article-recomended {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    width: 100%;
+
+    padding: 48px 24px;
 }
 
 .article-recomended > h1 {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto 32px;
+
     font-size: 24px;
-    margin-bottom: 32px;
+    line-height: 1.3;
 }
 
-.article-list{
+.article-list {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: auto;
+
     display: grid;
     grid-template-columns: 1fr;
+
     gap: 32px;
 }
 
-/* cards style */
+/* ==========================
+   CARDS
+========================== */
+
 .card {
+    width: 100%;
+
     border: 1px solid var(--gray-20);
     border-radius: 8px;
+
     overflow: hidden;
+
+    background-color: var(--white);
 }
 
 .card img {
     width: 100%;
+    height: auto;
+
     display: block;
 }
 
 .card h2 {
+    margin: 24px 24px 12px;
+
     font-size: 20px;
     line-height: 1.4;
-    margin: 24px 24px 12px;
+    font-weight: 700;
 }
 
 .card p {
     margin: 0 24px 24px;
+
+    color: var(--gray-10);
+
     font-size: 16px;
     line-height: 24px;
-    color: var(--gray-10);
 }
 
-/* form styles */
+/* ==========================
+   FORMULÁRIO
+========================== */
+
 .form-container {
-    background-color: var(--gray-40);
+    width: 100%;
+
     padding: 48px 24px;
+
+    background-color: var(--gray-40);
+
     display: flex;
     flex-direction: column;
+
     gap: 24px;
 }
 
 .form-container h2 {
     font-size: 24px;
+    line-height: 1.3;
+
     margin-bottom: 16px;
 }
 
 .form-container input,
 .form-container textarea {
     width: 100%;
+
     padding: 16px;
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
+
     border: 1px solid var(--gray-20);
     border-radius: 4px;
+
+    background-color: var(--white);
+
+    font-family: inherit;
+    font-size: 16px;
+
     outline: none;
 }
 
 .form-container textarea {
     height: 130px;
+
     resize: none;
 }
 
 .form-container input[type="submit"] {
     background-color: var(--brand-color);
     color: var(--white);
+
     border: none;
+
     font-weight: 700;
+
     text-transform: uppercase;
+
     cursor: pointer;
 }
 
-/* Tablets screens styles */
+/* ==========================
+   TABLET
+========================== */
+
 @media screen and (min-width: 768px) {
 
-    section {
-        padding-left: 32px;
-        padding-right: 32px;
-    }
-
     .hero {
-        padding-top: 64px;
-        padding-bottom: 64px;
+        padding: 64px 32px;
     }
 
-    .hero img {
+    .hero > img {
         width: 40%;
         max-width: 280px;
     }
 
-    .hero h2 {
+    .hero-content {
         max-width: 520px;
     }
 
-    .hero p {
-        max-width: 520px;
-    }
-
-    .hero .btn-search {
-        max-width: 520px;
+    .hero-content .btn-search {
+        width: 100%;
     }
 
     .article-recomended {
-        padding-top: 64px;
-        padding-bottom: 64px;
+        padding: 64px 32px;
     }
 
     .article-list {
         grid-template-columns: repeat(2, 1fr);
+
         gap: 32px;
     }
 
@@ -220,49 +267,48 @@ section {
     }
 }
 
-/* desktops screens styles */
+/* ==========================
+   DESKTOP
+========================== */
+
 @media screen and (min-width: 1024px) {
 
     .hero {
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: row-reverse;
+        justify-content: center;
         align-items: center;
 
-        text-align: left;
+        gap: 100px;
 
         padding: 64px 10%;
+
+        text-align: left;
     }
 
-    .hero-content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
-        gap: 24px;
-
-        width: 45%;
-        max-width: 500px;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-        max-width: 500px;
-    }
-
-    .hero p {
-        max-width: 450px;
-    }
-
-    .hero img {
+    .hero > img {
         width: 40%;
         max-width: 400px;
     }
 
-    .hero .btn-search {
+    .hero-content {
+        width: 45%;
+        max-width: 500px;
+
+        align-items: flex-start;
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        max-width: 450px;
+    }
+
+    .hero-content .btn-search {
         width: auto;
         min-width: 180px;
     }
-
 
     .article-recomended {
         padding: 64px 10%;
@@ -270,18 +316,20 @@ section {
 
     .article-list {
         grid-template-columns: repeat(3, 1fr);
+
         gap: 24px;
     }
 
-
     .form-container {
-        align-items: center;
         padding: 64px 24px;
+
+        align-items: center;
     }
 
     .form-container h2 {
         width: 100%;
         max-width: 450px;
+
         text-align: center;
     }
 
